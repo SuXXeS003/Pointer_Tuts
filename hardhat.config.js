@@ -17,10 +17,16 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: "0.8.4",
-  networks: {
-    hardhat: {
-      chainId: 1337,
+    solidity: "0.8.4",
+    networks: {
+        hardhat: {
+            chainId: 1337,
+        },
     },
-  },
+    paths: {
+        sources: "./comments-with-polygon/contracts",
+        tests: "./comments-with-polygon/test",
+        cache: "./comments-with-polygon/cache",
+        artifacts: "./comments-with-polygon/artifacts"
+    }
 };
